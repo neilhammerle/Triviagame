@@ -49,4 +49,24 @@ function loadQandA() {
     if (answered === false) {
         timer ();
     }
+    correct = triviaGame[indexQandA].correct;
+    var question = triviaGame[indexQandA].question;
+    $('.question').html(question);
+    for (var i = 0; i < 4; i++) {
+        var answer = triviaGame[indexQandA].answer[i];
+        $('.answers').append('<h4 class= answersAll id=' + i + '>' + answer + '</h4>');
+        }
+    $("h4").click(function () {
+        var id = $(this).attr('id');
+        if (id === correct){
+            answered = true;
+            $('.question').text ("The Answer is:" + triviaGame[indexQandA].answer[correct]);
+            correctAnswer ();
+        } else {
+            answered = true;
+            $('.question').text("You chose:" + triviaGame[indexQandA].answer[id] + ".... the correct answer is:" + triviaGame[indexQandA].answer[correct]);
+            incorrectAnswer();
+        }
+    });
 }
+});
