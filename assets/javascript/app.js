@@ -21,6 +21,7 @@ $(document).ready(function () {
     question: "Which player plays for the Golden State Warriors?",
     answer: ["Stephen Curry", "Monte Ellis", "LeBron James", "Kobe Bryant"],
     correct: "0"
+    
 
 }, {
     question: "Which season did the Golden State Warriors won their 1st NBA Championship in 50 years?",
